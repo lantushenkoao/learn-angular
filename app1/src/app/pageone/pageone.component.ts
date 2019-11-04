@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from '../dao/Item';
+import {ItemService} from "../item-service/item.service";
 
 @Component({
   selector: 'app-pageone',
@@ -9,14 +10,10 @@ import {Item} from '../dao/Item';
 export class PageoneComponent implements OnInit {
   items: Item[];
 
-  constructor() {
-  }
+  constructor(private itemService: ItemService) {}
 
   ngOnInit() {
-    this.items = [
-      new Item('a8708fae-4d0f-4434-b480-376500e1ebb4', 'Test item 1'),
-      new Item('a18cdce2-0b30-4dc2-b933-5da79e725e88', 'Test item 2')
-    ];
+    this.items = this.itemService.listItems();
   }
 
 }
