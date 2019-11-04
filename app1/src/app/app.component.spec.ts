@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {Component} from "@angular/core";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockPageoneComponent
       ],
     }).compileComponents();
   }));
@@ -33,3 +35,9 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.js-heading').textContent).toContain('Testing angular syntax');
   });
 });
+@Component({
+  selector: 'app-pageone',
+  template: ''
+})
+class MockPageoneComponent {
+}
