@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('app1 app is running!');
+    expect(compiled.querySelector('.js-heading').textContent).toContain('Testing angular syntax');
   });
 });
