@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Item} from '../dao/Item';
-import {ItemService} from "../item-service/item.service";
+import {Item} from '../../dao/Item';
+import {ItemService} from "../../services/item-service/item.service";
 
 @Component({
   selector: 'app-pageone',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Item} from "../dao/Item";
+import {Item} from "../../dao/Item";
 
 @Injectable({
   providedIn: 'root'
